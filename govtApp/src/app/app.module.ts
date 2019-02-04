@@ -29,7 +29,6 @@ import { CreateEstimateComponent } from './create-estimate/create-estimate.compo
 import { NestedtreeComponent } from './nestedtree/nestedtree.component';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { AppMaterialModule } from './app-material/app-material.module'
-import '@vaadin/vaadin-date-picker/vaadin-date-picker.js';
 
 @NgModule({
   declarations: [
