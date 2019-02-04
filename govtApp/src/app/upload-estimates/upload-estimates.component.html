@@ -1,0 +1,277 @@
+<div class="test">
+    <table>
+        <td colspan="3" class="FldHierarchy">Application &gt; Budget &gt; Expenditure Estimates &gt; List of Expenditure Estimates</td>
+    </table>
+    
+    <form [formGroup]="budget_uploadEstimate_forms" (ngSubmit)="onSubmit()">
+        <table bgcolor="white" align="center" width="100%" height="100%" class="budget_uploadEstimate_table">
+            <thead>
+                <tr>
+                    <th class="budget_uploadEstimate_search">Search Estimate</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <tbody class="test_2">
+                    <tr>
+                        <td class="budget_uploadEstimate_details_header">Department<span class="budget_uploadEstimate_details_header_department">*</span></td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field  class="mat_form_field" >
+                                <mat-select placeholder="----------Select----------" formControlName="department_value">
+                                    <mat-option *ngFor="let department_details of Department" [value]="department_details.value"  >
+                                        {{department_details.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="budget_uploadEstimate_details_header">Financial Year</td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field  class="mat_form_field">
+                                <mat-select placeholder="-------Select Year-------" formControlName="financial_year_value">
+                                    <mat-option *ngFor="let financial_year of Financial_Year" [value]="financial_year.value">
+                                        {{financial_year.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="budget_uploadEstimate_details_header">Demand</td>
+                        <td width="1%">&nbsp;</td>
+                        <td class="test_1">
+                            <mat-form-field class="mat_form_field">
+                                <mat-select  placeholder="----------Select----------" formControlName="demand_value">
+                                    <mat-option *ngFor="let demand of Demand" [value]="demand.value">
+                                        {{demand.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="budget_uploadEstimate_details_header">Estimation Form</td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field  class="mat_form_field">
+                                <mat-select placeholder="----------Select----------" formControlName="estimation_form_value">
+                                    <mat-option *ngFor="let estimation_form of Estimation_Form" [value]="estimation_form.value">
+                                        {{estimation_form.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="budget_uploadEstimate_details_header">Major Head</td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field  class="mat_form_field">
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="budget_uploadEstimate_details_header">Sub Major Head</td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field  class="mat_form_field">
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="budget_uploadEstimate_details_header">Minor Head</td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field  class="mat_form_field">
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                        <tr>
+
+                        <td class="budget_uploadEstimate_details_header">File Created</td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field  class="mat_form_field">
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </tr>
+           
+
+            <table align="center">
+            <tr>
+                <td>
+                    <div class="wrapper">
+                        <input type="submit" value="Search" class="btn btn-primary">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+ </table>
+    </form>
+
+    <!-- Budget Details Table -->
+
+    <div *ngIf="budget_search_details_table" class="budget">
+
+        <table class="table table-sm table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th>Correction</th>
+                    <th>Delete</th>
+                    <th>Financial Year</th>
+                    <th>Estimation Form</th>
+                    <th>Demand</th>
+                    <th>Major Head</th>
+                    <th>Sub Major Head</th>
+                    <th>Minor Head</th>
+                    <th>Sub Head</th>
+                    <th>Detail Head</th>
+                    <th>File Created</th>
+                    <th>File Reference Number</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="result_table_checkbox" >
+                        <input type="radio" align="center" name="result_table_radiobutton">
+                    </td>
+                    <td class="result_table_checkbox">
+                        <input type="checkbox" >
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="result_table_checkbox">
+                        <input type="radio" name="result_table_radiobutton">
+                    </td>
+                    <td class="result_table_checkbox">
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="result_table_checkbox">
+                        <input type="radio" name="result_table_radiobutton">
+                    </td>
+                    <td class="result_table_checkbox">
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+
+                </tr>
+            </tbody>
+
+            <!--Table body-->
+        </table>
+        <!--<form>-->
+        <table align="center">
+            <tbody>
+                <tr style="text-align:center;">
+
+                    <div id="test_3">
+                        <td>
+                            <button class="btn btn-info" (click)="DeleteConnection_onclick()">Delete</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-info" (click)="CreateEstimation_onclick()">Create Estimation</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-info" (click)="CreateConnection_onclick();">Create Correction</button>
+                        </td>
+
+                    </div>
+                    <!--</td>-->
+                </tr>
+
+            </tbody>
+        </table>
+        <!--Table-->
+        <!--</form>-->
+    </div>
+
+</div>

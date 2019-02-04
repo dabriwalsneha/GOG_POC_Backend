@@ -1,0 +1,251 @@
+.none {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	font-variant: normal;
+	background-image:url(/IWAS/images/1page_BG.gif);
+	color: #000000;
+}
+.BoldHeader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #375472;
+}
+A:link {
+	COLOR: #FFFFFF;
+	FONT-SIZE: 11px;
+	FONT-WEIGHT: bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	text-decoration: none;
+	font-variant: normal;
+}
+A:active {
+	TEXT-DECORATION: none;
+	FONT-SIZE: 11px;
+	FONT-WEIGHT: bold;
+	color:#FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+A:hover {
+	COLOR:#FFFFFF;
+	FONT-SIZE: 11px;
+	FONT-WEIGHT: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.treemenu
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	font-variant: normal;
+	color:#666666;
+}
+.td
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	font-variant: normal;
+	color:#666666;
+}
+.message {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #D9DEE4}
+.message1 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #D9DEE4}
+.highlated {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #003300; font-variant: normal; text-transform: none}
+.content {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #2C5170}
+.topNav {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #F3F3F3; font-weight: bold}
+link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	COLOR:#FFFFFF;
+	FONT-SIZE: 11px;
+	FONT-WEIGHT: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-variant: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+h2{
+	text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #263765;
+
+}
+
+.TableBorderN {border-style : solid ; border-color :grey; border-width: 1px;}
+
+.TableBorderBN {border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderRN {border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderLN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;}
+
+.TableBorderTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;}
+
+.TableBorderLTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;}
+
+.TableBorderTRN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRBN {border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBLN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderLRN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRLN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderTBN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderLTRN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderTRBN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRBLN {border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBLTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;}
+
+.TableBorderLTRBN {border-top-style : solid ; border-top-color :"#375472"; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :"#375472"; border-bottom-width: 1px;border-left-style : solid ; border-left-color :"#375472"; border-left-width: 1px;border-right-style : solid ; border-right-color :"#375472"; border-right-width: 1px;}
+
+.TableBorderTRBLN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRBLTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBLTRN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderH {border-top-style : solid ; border-top-color :#CCCCCC; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :#CCCCCC; border-bottom-width: 1px;border-left-style : solid ; border-left-color :#CCCCCC; border-left-width: 1px;border-right-style : solid ; border-right-color :#AEBAC6; border-right-width: 1px;}
+
+.TableBorder {border-top-style : solid ; border-top-color :#F7F7F7; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :#F7F7F7; border-bottom-width: 1px;border-left-style : solid ; border-left-color :#F7F7F7; border-left-width: 1px;border-right-style : solid ; border-right-color :white; border-right-width: 1px;}
+
+.TableBorder2{border-top-style : solid ; border-top-color :#F7F7F7; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :#F7F7F7; border-bottom-width: 1px;border-left-style : solid ; border-left-color :#F7F7F7; border-left-width: 1px;border-right-style : solid ; border-right-color :#F7F7F7; border-right-width: 1px;}
+
+.TableBorder3{border-right-color:#F5FCF4}
+
+.TableBorder4{border-right-color:#AEBAC6}
+/* 
+a:link {font-family:Verdana; text-decoration: none; color:white;font-weight:bold; font-size:10 }
+a:active { font-family:Verdana; text-decoration: none; color:navy;font-weight:bold; font-size:10} 
+a:visited {font-family:Verdana; text-decoration: none; color:navy; font-weight:bold;font-size:10 }
+a:hover {font-family:Verdana; text-decoration: none; color:#990033;font-weight:bold; font-size:10 }
+a.Unreadfile:link{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+a.Unreadfile:active{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+a.Unreadfile:visited{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+a.Unreadfile:hover{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+
+a.file:link {font-family:Verdana; text-decoration:underline; color:black;font-weight:normal; font-size:10 }
+a.file:active { font-family:Verdana; text-decoration:underline; color:black;font-weight:normal; font-size:10} 
+a.file:visited {font-family:Verdana; text-decoration:underline; color:black; font-weight:normal;font-size:10 }
+a.file:hover {font-family:Verdana;  text-decoration:underline; color:navy;font-weight:normal; font-size:10 }
+
+a.pagination:link {font-family:Verdana; text-decoration: none; color:navy;font-weight:normal; font-size:10 }
+a.pagination:active { font-family: Verdana; text-decoration: none;color:navy;font-weight:normal; font-size: 10} 
+a.pagination:visited {font-family:Verdana; text-decoration: none; color:navy; font-weight:normal;font-size:10 }
+a.pagination:hover {font-family:Verdana; text-decoration: none; color:#990033;font-weight:normal; font-size:10 }
+
+.TitleBG {background:#FFFFFF;font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;}
+.FileInfoBG {background: #F3F3F3}
+.TablerowBG1 {background: #F7F7F7}
+.TablerowBG2 {background: #FFFFFF}
+
+
+
+ .TableHeaderBG { background :#AEBAC6; border-style:solid; border-color:#000000 }
+
+.HLabel { font-family:Verdana;font-size:10;font-weight:bold;color:black}
+.Label { font-family:Verdana;text-decoration: none;font-size:10;font-weight:bold;color:#263765}
+.Label { font-family:Verdana;text-decoration: none;font-size:10;font-weight:normal;color:Black}
+.Label2 { font-family:Verdana;text-decoration: none;font-size:10;font-weight:normal;color:Black}
+.Label3 { font-family:Verdana;text-decoration: none;font-size:11;font-weight:normal;color:Black}
+.Label1 { font-family:Verdana;text-decoration: none;font-size:6pt;color:Navy}
+
+.titles{  font-family: Verdana;text-align: center;font-size:8pt;color:#660000;font-weight: bold;}
+.HeaderLabel { font-family:verdana;text-decoration: none;font-size:9pt;font-weight:bold;color:#800000}
+.EditableField { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;}
+.EditableField1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;}
+.ComputedField { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray}
+.FileInfoBG{background: #F3F3F3}
+.UserText { font-family:Verdana;text-decoration: none;font-size:7pt;font-weight:bold;color:Red}
+
+
+.EditableFieldBBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-bottom-style : solid ; border-bottom-color :navy; border-bottom-width: 1px;}
+.EditableFieldTBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-top-style : solid ; border-top-color :navy; border-top-width: 1px;}
+.EditableFieldLBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-left-style : solid ; border-left-color :navy; border-left-width: 1px;}
+.EditableFieldRBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-right-style : solid ; border-right-color :navy; border-right-width: 1px;}
+
+.ComputedFieldBBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-bottom-style : solid ; border-bottom-color :navy; border-bottom-width: 1px;}
+.ComputedFieldTBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-top-style : solid ; border-top-color :navy; border-top-width: 1px;}
+.ComputedFieldLBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-left-style : solid ; border-left-color :navy; border-left-width: 1px;}
+.ComputedFieldRBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-right-style : solid ; border-right-color :navy; border-right-width: 1px;}
+
+.EditableFieldBBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-bottom-style : solid ; border-bottom-color :Gray; border-bottom-width: 1px;}
+.EditableFieldTBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-top-style : solid ; border-top-color :Gray; border-top-width: 1px;}
+.EditableFieldLBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-left-style : solid ; border-left-color :Gray; border-left-width: 1px;}
+.EditableFieldRBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-right-style : solid ; border-right-color :Gray; border-right-width: 1px;}
+
+.ComputedFieldBBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-bottom-style : solid ; border-bottom-color :Gray; border-bottom-width: 1px;}
+.ComputedFieldTBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-top-style : solid ; border-top-color :Gray; border-top-width: 1px;}
+.ComputedFieldLBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-left-style : solid ; border-left-color :Gray; border-left-width: 1px;}
+.ComputedFieldRBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-right-style : solid ; border-right-color :Gray; border-right-width: 1px;}
+
+.LabelFieldM{  font-family: Verdana;text-align: left;font-size:8pt;color:#660000;font-weight: bold;border-width:0px;background: #F3F3F3}
+.LabelFieldB{  font-family: Verdana;text-align: left;font-size:8pt;color:black;font-weight:normal;border-width:0px;background: #F3F3F3}
+.LabelFieldW{  font-family: Verdana;text-align: center;font-size:8pt;color:white;font-weight:bold;border-width:0px;background: #FFFFFF}
+.LabelFieldSM{  font-family: Verdana;text-align: center;font-size:8pt;color:#660000;font-weight: bold;border-width:0px;background: #999999}
+
+
+.ListBoxGUI { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black}
+
+.ListBoxGUIA { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:navy;width:175;}
+.ListBoxGUI2 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;width:128; }
+.ListBoxGUI1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;}
+.ListBoxGUI1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;width:129; }
+.ListBoxGUI3 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;width:300; }
+.ListBoxGUI4 { font-family:verdana;text-decoration: none;font-size:12pt;font-weight:normal;color:Black;width:300; }
+
+
+.TableBorderNavy {border-style : solid ; border-color :navy; border-width: 1px;}
+.TableBorderWhite {border-style : solid ; border-color :White; border-width: 1px;}
+.TableBorderGray {border-style : solid ; border-color :Gray; border-width: 1px;}
+
+.Body { 
+background-image:url(/IWAS/images/1page_BG.gif);
+font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;background:#EFEFF8;}
+
+.TDPlain { font-family:verdana;text-decoration: none;font-size:8pt}
+.ActionButton{ font-size:10;width:60}
+.ActionButtonbig{ font-size:10;width:100}
+.FieldBlack { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;width:143}
+.FieldGrey { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray}
+.FieldBlack1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;width:175}
+.FieldBlack3 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black}
+
+.FldHierarchy{font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #375472;}
+
+TD { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold}
+TH { color:navy;
+	 font-weight:bold;
+	 font-size:10pt
+   }
+.LABLESAFE{background:'#7FFF7F' ; font-family:Arial;text-decoration: none;font-size:8pt;font-weight:bold;color:Navy;}
+.LABLEUNSAFE{background:'#FF0000';font-family:Arial;text-decoration: none;font-size:8pt;font-weight:bold;color:Navy;}
+.LabelUnRead { font-family:Verdana;text-decoration: none;font-size:11;font-weight:normal;color:Red}
+.LABLEC{
+	color:'#000080'} */

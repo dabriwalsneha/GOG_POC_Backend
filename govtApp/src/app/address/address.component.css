@@ -1,0 +1,16 @@
+input{
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+label{
+    margin: 10px 5px 0 0;
+    padding-top: 7px;
+    float: left;
+    width: 7%;
+}
+.inline {
+    display: inline-block;
+    width : 100%;
+}

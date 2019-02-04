@@ -1,0 +1,38 @@
+<login-user></login-user>
+<div class="container-fluid">
+ <form [formGroup]="signupForm" novalidate (ngSubmit)="onFormSubmit(signupForm,fname,lname)">
+    <div class="form-group inline">
+         <label>First Name: </label>
+      <input type="text"  [ngModelOptions]="{standalone: true}" [(ngModel)]="fname" placeholder="FirstName">
+    </div>
+    
+    <div class="form-group inline">
+         <label>Last Name: </label>
+      <input type="text"  [ngModelOptions]="{standalone: true}" [(ngModel)]="lname" placeholder="LastName">
+    </div>
+    <div formGroupName="itemsRows">
+    <ng-container *ngIf="signupForm.controls.itemsRows!=null">
+      <!--  NAME -->
+      
+      <div *ngFor="let itemrow of signupForm.controls.itemsRows.controls; let i=index" [formGroupName]="i">
+        <hr width="50%">
+    <div class="form-group inline">
+      <label>HOUSE: </label>
+      <input type="text" formControlName="__Adrs___hno" placeholder="House No">
+    </div>
+     <div class="form-group inline">
+       <label>CITY: </label>
+      <input type="text" formControlName="__Adrs___city" placeholder="Enter Your City">
+    </div>
+     <div class="form-group inline">
+       <label>STATE: </label>
+      <input type="text" formControlName="__Adrs___state" placeholder="Enter Your State">
+    </div>
+      </div>
+    </ng-container>
+    <input type="button" (click)="addrow()" [disabled]="signupForm.invalid" value="ADD ROW">
+    <input type="button" (click)="deleteRow()" [disabled]="signupForm.invalid" value="DELETE ROW">
+    </div>
+    <input type="submit" >
+  </form>
+  </div>

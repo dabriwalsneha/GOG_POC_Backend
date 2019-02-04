@@ -1,0 +1,68 @@
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.mat-tree-node { 
+  min-height: 0px;
+  line-height: normal;
+  display: block;
+  }
+
+.mat-tree-node a{
+text-decoration: none;
+color: black;
+}
+
+.material_tree{
+ margin-left: -2em;
+ /*height: 100%;*/
+ 
+}
+.example-container {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.example-conatiner.sidebar{
+  width: 300px;
+  border: 1px solid grey;
+  height: 78vh;
+  overflow-y: auto;
+  border-bottom: none;
+  
+}
+.example-conatiner.content{
+  border: 1px solid grey;
+  overflow-x: hidden;
+}
+.TablerowBG2{
+  background-color: #f2f2f2;
+   color: 	#585858;
+}
+
+.TablerowBG1{
+  color: #585858	;
+}
+
+.TableBorderLTRBN{
+  border: 1px solid grey;
+}
+
+.TableHeaderBG{
+  font: bold;
+  background-color: lightslategrey;
+}
+
+.HLabel{
+  color: black;
+  font-weight: bold;
+}

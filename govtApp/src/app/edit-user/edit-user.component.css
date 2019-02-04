@@ -1,0 +1,45 @@
+.edit-user-form{
+    margin : 5px 0 0 10px;
+    display: block;
+    border: 1px black;
+    padding: 10px 10px 10px 10px;
+}
+
+.btn{
+    align-self : left;
+}
+
+td{
+    padding: 5px 0px 5px 5px;
+}
+
+h2 {
+    color : lightcoral;
+}
+
+.inline {
+    display: inline-block;
+    width : 100%;
+}
+
+.inp1{
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+label{
+    margin: 10px 5px 0 0;
+    padding-top: 7px;
+    float: left;
+    width: 7%;
+}
+.inp{
+    margin: 10px 3px 0 2px;
+}
+select{
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 140px;
+}

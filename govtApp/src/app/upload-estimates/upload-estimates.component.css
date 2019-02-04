@@ -1,0 +1,68 @@
+.budget_uploadEstimate_search{
+     background-color: #C0C0C0;
+     text-align: center;
+     width: 100%;
+     height: 25px;
+     margin-top: 25px;
+}
+ .budget_uploadEstimate_details_header{
+     font-weight: bold;
+     padding: 20px;
+     margin-top: 20px;
+}
+ .budget_uploadEstimate_table{
+     margin-top: 10px;
+     border-bottom: none ;
+}
+ .table budget_uploadEstimate_table{
+     border-collapse: collapse;
+     border: 1px solid grey;
+     right: 10;
+}
+ .budget_uploadEstimate_table tbody{
+     text-align: center;
+}
+ .budget_uploadEstimate_table tr td{
+     height: 10px;
+}
+ .budget_uploadEstimate_details_header_department{
+     color: red;
+}
+ .wrapper {
+     text-align: center;
+     padding: 20px;
+}
+ .budget{
+     margin: 50px;
+}
+ .test{
+     background-color: #F8F8F8;
+}
+ .test_3{
+     width: 100% 
+}
+ .mat-form-field{
+     height: 10px;
+}
+ .test_2 tr td{
+     line-height: 6px;
+}
+ .mat-form-field{
+     line-height: initial;
+}
+ .result_table_checkbox{
+     text-align: center;
+     vertical-align: middle;
+}
+.FldHierarchy{
+    /*color: grey;*/
+    margin-bottom: 20px;
+    margin-left: 2px;
+   color: gray;
+    font-weight: bold;
+}
+ .mat_form_field{
+     width: 200px;
+     text-align: center;
+ }
+ 

@@ -1,0 +1,21 @@
+.table-class{
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+.table_row{
+    float: left;
+}
+
+.table_column{
+    padding-left: 20px;
+}
+
+.textbox{
+    background-color: whitesmoke;
+    border: 0px;
+}
+
+.top{
+    padding: 20px;
+}

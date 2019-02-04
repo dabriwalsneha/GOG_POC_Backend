@@ -1,0 +1,42 @@
+.example-tree-invisible {
+     display: none;
+}
+ .example-tree ul, .example-tree li {
+     margin-top: 0;
+     margin-bottom: 0;
+     list-style-type: none;
+}
+ .mat-tree-node {
+     min-height: 0px;
+     display: block;
+}
+ .mat-tree-node a{
+     text-decoration: none;
+     color: black;
+}
+ .material_tree{
+     margin-left: -2em;
+  /*overflow: auto;*/
+}
+ .TablerowBG2{
+     background-color: #f2f2f2;
+     color: #585858;
+}
+ .TablerowBG1{
+     color: #585858 ;
+}
+ .TableBorderLTRBN{
+     border: 1px solid grey;
+}
+ .TableBorderLTRBN tr{
+     line-height: 16px;
+}
+ .TableHeaderBG{
+     font: bold;
+     background-color: lightslategrey;
+}
+ .HLabel{
+     color: black;
+     font-weight: bold;
+}
+ 

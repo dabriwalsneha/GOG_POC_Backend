@@ -1,0 +1,106 @@
+<login-user></login-user>
+<div class="add-user-form">
+  <h2>Add User</h2>
+
+  <form #f="ngForm" (ngSubmit)="createUser()">
+    <div class="form-group inline">
+
+      <label for="firstName">First Name</label>
+      <input [(ngModel)]="user.firstname" ngModel #firstname="ngModel" placeholder="First Name" name="firstName" class="form-control inp1"
+        id="firstName" autocomplete="off" required>
+
+      <label for="lastName">Last Name</label>
+      <input [(ngModel)]="user.lastname" ngModel #lastName="ngModel" placeholder="Last name" name="lastName" class="form-control inp1"
+        id="lastName" autocomplete="off" required>
+
+    </div>
+    <div class="form-group inline">
+
+      <label for="email"> Email Address</label>
+      <input [(ngModel)]="user.email" ngModel #email="ngModel" placeholder="Email Address" name="email" class="form-control inp1"
+        id="email" autocomplete="off" required>
+
+      <label for="contact"> Contact No.</label>
+      <input [(ngModel)]="user.contact" ngModel #contact="ngModel" minlength="10" maxlength="10" placeholder="Contact No."
+        name="contact" class="form-control inp1" id="contact" autocomplete="off" required>
+    </div>
+    <div class="form-froup inline">
+      <label for="age">Age</label>
+      <input [(ngModel)]="user.age" ngModel #age="ngModel" placeholder="Age" name="age" class="form-control inp1" id="age"
+        autocomplete="off" required>
+      <label for="gender">Gender</label>
+      <input class="inp" type="radio" [(ngModel)]="user.gender" ngModel #gender="ngModel" value="Male" name="gender" required>Male
+      <input class="inp" type="radio" [(ngModel)]="user.gender" ngModel #gender="ngModel" value="Female" name="gender" required>Female
+      <input class="inp" type="radio" [(ngModel)]="user.gender" ngModel #gender="ngModel" value="Others" name="gender" required>Others
+    </div>
+
+    <div class="form-froup inline">
+      <label for="dob">Date of Birth</label>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="user.dob" ngModel #dob="ngModel" placeholder="Choose a date"
+          name="dob" id="dob" autocomplete="off" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="form-froup inline">
+      <label for="designation">Designation</label>
+      <table>
+        <tr>
+          <td style="width: 120px">
+            <select size="5" multiple="multiple" class="form-control" [(ngModel)]="usr" name="alldesg" id="alldesg"
+              ngModel #alldesg="ngModel" (change)="createList(usr,btn1,'button1',btn2)" required>
+              <option *ngFor="let usr of fromUserslist">{{usr}}</option>
+            </select>
+          </td>
+          <span>&nbsp;</span>
+          <td style="width: 50px">
+            <input class="inp" type="button" #btn1 disabled (click)="updateToList()" value="-->" /><br /><br />
+            <input class="inp" type="button" #btn2 disabled (click)="removeFromList()" value="<--" />
+          </td>
+          <td style="width: 120px">
+            <select size="5" name="asgdesg" id="asgdesg" multiple="multiple" class="form-control" [(ngModel)]="usr"
+              (change)="createList(usr,btn1,'button2',btn2)">
+              <option *ngFor="let usr of toUserslist">{{usr}}</option>
+            </select>
+          </td>
+          <td>
+            <input type="hidden" id="status" name="status">
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="form-group inline">
+      <label for="houseNo">House Number</label>
+      <input [(ngModel)]="user.address.houseNo" ngModel #houseNo="ngModel" placeholder="House number" name="houseNo"
+        class="form-control inp1" autocomplete="off" required>
+
+      <label for="street">Street Number</label>
+      <input [(ngModel)]="user.address.steetNo" ngModel #street="ngModel" placeholder="Street number" name="street"
+        class="form-control inp1" autocomplete="off" required>
+    </div>
+
+    <div class="form-group inline">
+      <label for="country">Country</label>
+      <select class="form-control" (change)="onChangeCountry($event.target.value)" [(ngModel)]="user.address.country"
+        ngModel #country="ngModel" name="country" id="country" required>
+        <option *ngFor="let c of countries" [value]="c.id">
+          {{c.cname}}
+        </option>
+      </select>
+
+      <label for="city">City</label>
+      <select class="form-control" [(ngModel)]="user.address.city" ngModel #city="ngModel" name="city" id="city"
+        required>
+        <option *ngFor="let city of cities">
+          {{city.cname}}
+        </option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="!f.valid">Add User</button>
+
+  </form>
+</div>

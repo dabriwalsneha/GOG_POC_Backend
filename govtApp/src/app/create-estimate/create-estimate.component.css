@@ -1,0 +1,86 @@
+.budget_createEstimate_table{
+margin: 1px;
+/*text-align: center;*/
+}
+
+.budget_createEstimate_header{
+width: 100% !important;
+background-color: #C0C0C0;
+font-weight: bold;
+text-align: center;
+}
+
+.createEstimate_details_header{
+    font-weight: bold;
+    padding-left: 25px;
+}
+
+.budget_createEstimate_details_redasterik{
+color: red;
+}
+
+ .mat-form-field{
+     height: 10px;
+     margin-top: -10px;
+}
+
+.test_5{
+    margin-top: 10px;
+}
+
+.budget_createEstimate_details_form_download{
+    text-decoration: none;
+    color: navy;
+    font-size: 13px;
+}
+
+.test_6{
+    border-collapse: collapse;
+    /*align-items: center;*/
+    /*content : center;*/
+    /*margin: 50px;*/
+    padding: 20px;
+}
+.test_6 tr td{
+    border: none;
+}
+.budget_createEstimate_upload_normal_GIA{
+    align-content: center;
+    /*padding-left: 150px;*/
+}
+.test_7{
+    text-align: left;
+}
+.budget_createEstimate_submit{
+    margin: 10px;
+}
+.budget_createEstimate_upload_breakup{
+    padding-left: 30px;
+}
+.FldHierarchy{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-left: 2px;
+    color: gray;
+    font-weight: bold;
+}
+
+.test_8{
+    margin: 20px;
+}
+
+.test_8 tr td{
+    border: none;
+}
+
+.test_8 td{
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.test_8 th {
+    border: none;
+}
+.test_9{
+    line-height: 14px;
+}
