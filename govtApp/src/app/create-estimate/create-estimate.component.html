@@ -1,0 +1,515 @@
+<login-user></login-user>
+<div class="wrapper">
+<form [formGroup]="budget_createEstimate_form">
+    <table bgcolor="white" class="FldHierarchy">
+        <td colspan="3" class="FldHierarchy">Application &gt; Budget &gt; Expenditure Estimates &gt; Standing Charges Form</td>
+    </table>
+    <table bgcolor="white" width="100%" height="100%" align="center">
+        <table align="center" width="100%" height="100%">
+            <th class="budget_createEstimate_header">Standing Charges Form</th>
+        </table>
+        <table class="test_5">
+            <tbody class="createEstimate_table_body">
+                <tr colspan="3">
+                    <td class="createEstimate_details_header">Financial Year<span class="budget_createEstimate_details_redasterik">*</span></td>
+                    <td width="1%">&nbsp;</td>
+                    <td>
+                        <mat-form-field>
+                            <mat-select placeholder="-------Select Year-------">
+                                <mat-option *ngFor="let financial_year of Financial_Year" [value]="financial_year.value">
+                                    {{financial_year.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="createEstimate_details_header">Department<span class="budget_createEstimate_details_redasterik">*</span></td>
+                    <td width="1%">&nbsp;</td>
+                    <td>
+                        <mat-form-field>
+                            <select matNativeControl required>
+                                <option>----------Select----------</option>
+                                <option value="test_1">Test 1</option>
+                                <option value="test_2">Test 2</option>
+                                <option value="test_3">Test 3</option>
+                                <option value="test_4">Test 4</option>
+                            </select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td class="createEstimate_details_header">Name of the Branch<span class="budget_createEstimate_details_redasterik">*</span></td>
+                    <td width="1%">&nbsp;</td>
+                    <td class="test_1">
+                        <mat-form-field>
+                            <mat-select placeholder="----------Select----------">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td class="createEstimate_details_header">Estimation Form<span class="budget_createEstimate_details_redasterik">*</span></td>
+                    <td width="1%">&nbsp;</td>
+                    <td>
+                        <mat-form-field>
+                            <mat-select placeholder="----------Select----------">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td class="createEstimate_details_header">Demand<span class="budget_createEstimate_details_redasterik">*</span></td>
+                    <td width="1%">&nbsp;</td>
+                    <td>
+                        <mat-form-field>
+                            <mat-select placeholder="----------Select----------">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <tr>
+
+                        <td class="createEstimate_details_header">BPN Code<span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field>
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="createEstimate_details_header">Major Head<span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field>
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="createEstimate_details_header">Sub Major Head<span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field>
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="createEstimate_details_header">Minor Head<span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field>
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="createEstimate_details_header">Sub Head<span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field>
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="createEstimate_details_header">Detailed Head<span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+                        <td>
+                            <mat-form-field>
+                                <mat-select placeholder="----------Select----------">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        &nbsp;
+                    </tr>
+                    <tr>
+
+                        <td class="createEstimate_details_header">Charged/Voted<span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+
+                        <input type="radio" name="createEstimate_charged_voted">Charged
+                        <input type="radio" name="createEstimate_charged_voted">Voted
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="createEstimate_details_header"><span class="budget_createEstimate_details_redasterik">*</span></td>
+                        <td width="1%">&nbsp;</td>
+
+                        <td>
+                            <table class="test_9"> 
+                                <tr>
+                                    <input type="file" class="btn btn-sm" (change)="upload">
+                                    </tr>
+                                        <tr>View Format Of
+                                        </tr>
+                                        <tr>
+                                            <a [href]="fileUrl"> Standing Charges : Form B</a>
+                                        </tr>
+                            </table>
+                        </td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="createEstimate_details_header">Upload Original Remarks<span class="budget_createEstimate_details_redasterik">*</span></td>
+                            <td width="1%">&nbsp;</td>
+
+                            <td>
+                                <input type="file" class="btn btn-sm" (change)="upload">
+                            </td>
+                        </tr>
+
+                        <tr colspan="3">
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <th class="test_7">Upload Breakup Sheets (For GIA)
+                            </th>
+                        </tr>
+
+                        <tr colspan="4">
+
+                            <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3131</td>
+                            <td width="1%">&nbsp;</td>
+
+                            <input type="radio" name="createEstimate_charged_voted" value="yes" formControlName="createEstimate_charged_voted">Yes
+                            <input type="radio" name="createEstimate_charged_voted" value="no" formControlName="createEstimate_charged_voted">No
+
+                        </tr>
+
+                        <tr>
+
+                            <td colspan="9">
+                                <div *ngIf="isSelected('yes')" class="budget_createEstimate_upload_normal_GIA">
+
+                                    <table align="center" border="1px solid grey" class="test_6">
+                                        <tr>
+                                            <td>Normal GIA Breakup</td>
+                                            <td>&nbsp;</td>
+
+                                            <td>
+                                                <input type="file" class="btn btn-sm" (change)="upload">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Upload GIA Excel File</td>
+                                            <td>&nbsp;</td>
+
+                                            <td>
+                                                <table class="test_9">
+                                                    <td>
+                                                        <tr>View Format Of</tr>
+                                                        <tr class="budget_createEstimate_details_form-download"><a [href]="fileUrl"> Standing Charges : Form B</a></tr>
+
+                                                    </td>
+                                                </table>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Upload GIA Remarks<span class="budget_createEstimate_details_redasterik">*</span></td>
+                                            <td>&nbsp;</td>
+
+                                            <td>
+                                                <input type="file" class="btn btn-sm" (change)="upload">
+                                            </td>
+                                        </tr>
+
+                                    </table>
+
+<!--Second Table-->
+
+<td>
+    </td>
+                                    <table border="1px solid grey" class="test_8">
+                                        <th colspan="4">District Wise GIA Breakup
+                                        </th>
+
+                                        <!--For Jilla-->
+
+                                        <tr>
+                                            <td>Upload GIA for Jilla</td>
+                                            <td>&nbsp;</td>
+
+                                            <td>
+                                                <input type="file" class="btn btn-sm" (change)="upload">
+                                            </td>
+
+                                            <td>
+                                                <table class="test_9">
+                                                    
+                                                    <tr>View Format Of</tr>
+                                                    <tr>
+                                                        <a [href]="gia_jilla">GIA : Jilla</a>
+                                                        </tr>
+                                                    
+                                                </table>
+                                            </td>
+                                            </tr>
+
+                                                    <!--For Taluka-->
+
+                                            <tr>
+                                                <td>Upload GIA for Taluka</td>
+                                                <td>&nbsp;</td>
+
+                                                <td>
+                                                    <input type="file" class="btn btn-sm" (change)="upload">
+                                                </td>
+
+                                                <td>
+                                                    <table class="test_9">
+                                                        <tr>View Format Of</tr>
+                                                        <tr class="budget_createEstimate_details_form-download">
+                                                            <a [href]="gia_taluka">GIA : Taluka</a>
+                                                            <tr>
+                                                    </table>
+                                                </td>
+                                                </tr>
+                                                
+                                                <tr>
+
+                                                    <td>Upload GIA for Gram<span class="budget_createEstimate_details_redasterik">*</span></td>
+                                                    <td>&nbsp;</td>
+
+                                                    <td>
+                                                        <input type="file" class="btn btn-sm" (change)="upload">
+                                                    </td>
+
+                                                    <td>
+                                                        <table class="test_9">
+                                                            <tr>View Format Of</tr>
+                                                            <tr class="budget_createEstimate_details_form-download">
+                                                                <a [href]="gia_gram">GIA : Gram</a>
+                                                                <tr>
+                                                        </table>
+                                                    </td>
+                                                    </tr>
+
+                                    </table>
+
+
+
+                                </div>
+                            </td>
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3132</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3132" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3132" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3133</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3133" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3133" value="no" checked="checked">No
+
+                            </tr>
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3135</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3135" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3135" value="no" checked="checked">No
+
+                            </tr>
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3135-13</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3135_13" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3135_13" value="no" checked="checked">No
+
+                            </tr>
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3135-14</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3135_14" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3135_14" value="no" checked="checked">No
+
+                            </tr>
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup"> Upload Breakup - 3135-15</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3135_15" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3135_15" value="no" checked="checked">No
+
+                            </tr>
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3135-16</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3135_16" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3135_16" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3241</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3241" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3241" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3243</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3243" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3243" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3351</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3351" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3351" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3353</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3353" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3353" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3561</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3561" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3561" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr colspan="4">
+
+                                <td class="budget_createEstimate_upload_breakup">Upload Breakup - 3563</td>
+                                <td width="1%">&nbsp;</td>
+
+                                <input type="radio" name="createEstimate_breakup_3563" value="yes">Yes
+                                <input type="radio" name="createEstimate_breakup_3563" value="no" checked="checked">No
+
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td width="1%">&nbsp;</td>
+                                <td></td>
+
+                                <tr colspan="4">
+
+                                    <td class="budget_createEstimate_upload_breakup">Upload Another Estimate</td>
+                                    <td width="1%">&nbsp;</td>
+
+                                    <input type="radio" name="createEstimate_upload_another_estimate" value="yes" checked="checked" >Yes
+                                    <input type="radio" name="createEstimate_upload_another_estimate" value="no">No
+
+                                </tr>
+
+            </tbody>
+        </table>
+        <table align="center">
+            <tr>
+                <td>
+                    <div class="col-md-4 center-block budget_createEstimate_submit">
+                        <input type="submit" value="Submit Estimation" class="btn btn-info btn-sm">
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </table>
+</form>
+</div>

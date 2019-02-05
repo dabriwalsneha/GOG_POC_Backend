@@ -1,0 +1,171 @@
+<login-user></login-user>
+<!-- <h2>Edit User</h2> -->
+<!-- <table>
+    <tr>
+      <td>First Name</td>
+      <td>
+        <input [(ngModel)]="user.firstname" placeholder="First Name" name="firstName" class="form-control" id="firstName" readonly>
+      </td>
+      <td> </td>
+      <td> </td>
+      <td>Last Name</td>
+      <td>
+        <input [(ngModel)]="user.lastname" placeholder="Last name" name="lastName" class="form-control" id="lastName" readonly>
+      </td>
+    </tr>
+    <tr>
+      <td>Email Address</td>
+      <td>
+        <input [(ngModel)]="user.email" placeholder="Email Address" name="email" class="form-control" id="email" readonly>
+      </td>
+      <td> </td>
+      <td> </td>
+      <td>Contact No.</td>
+      <td>
+        <input [(ngModel)]="user.contact" placeholder="Contact No." name="contact" class="form-control" id="contact">
+      </td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>
+        <input [(ngModel)]="user.age" placeholder="Age" name="age" class="form-control" id="age" readonly>
+      </td>
+      <td> </td>
+      <td> </td>
+      <td>Gender</td>
+      <td>
+        <input type="radio" [(ngModel)]="user.gender" value="Male" name="gender" disabled>Male
+        <input type="radio" [(ngModel)]="user.gender" value="Female" name="gender" disabled>Female
+        <input type="radio" [(ngModel)]="user.gender" value="Others" name="gender" disabled>Others
+      </td>
+
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>
+        <select [(ngModel)]="user.city">
+          <option *ngFor="let c of city">
+            {{c}}
+          </option>
+        </select>
+      </td>
+      <td> </td>
+      <td> </td>
+      <td>Designation</td>
+      <td>
+        <table>
+          <tr>
+            <td style="width: 120px">
+              <select size="5" name="alldesg" id="alldesg" multiple="multiple" style="width: 100%" [(ngModel)]="usr" (change)="createList(usr,btn1,'button1',btn2)">
+                <option *ngFor="let usr of fromUserslist">{{usr}}</option>
+              </select>
+            </td>
+            <span>&nbsp; &nbsp;&nbsp;</span>
+            <td style="width: 50px">
+              <input type="button" #btn1 disabled (click)="updateToList()"  /><br/><br/>
+              <input type="button" #btn2 disabled (click)="removeFromList()" value="<--" />
+            </td>
+            <td style="width: 120px">
+                <select size="5" name="asgdesg" id="asgdesg" multiple="multiple" style="width: 100%" [(ngModel)]="usr" (change)="createList(usr,btn1,'button2',btn2)">
+                  <option *ngFor="let usr of toUserslist">{{usr}}</option>
+                </select>
+              </td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <button class="btn" (click)="createUser()" routerLink="/login_user">Edit User</button>
+      </td>
+    </tr>
+
+  </table> -->
+
+
+<div class="edit-user-form">
+  <h2>Edit User</h2>
+
+  <form #f="ngForm" (ngSubmit)="createUser()">
+    <div class="form-group">
+
+      <label for="firstName">First Name</label>
+      <input [(ngModel)]="user.firstname" name="firstName" class="form-control inp1" id="firstName" readonly>
+
+      <label for="lastName">Last Name</label>
+      <input [(ngModel)]="user.lastname" name="lastName" class="form-control inp1" id="lastName" readonly>
+
+    </div>
+    <div class="form-group inline">
+
+      <label for="email"> Email Address</label>
+      <input [(ngModel)]="user.email" name="email" class="form-control inp1" id="email" readonly>
+
+      <label for="contact"> Contact No.</label>
+      <input [(ngModel)]="user.contact" name="contact" class="form-control inp1" id="contact" readonly>
+    </div>
+    <div class="form-froup inline">
+      <label for="age">Age</label>
+      <input [(ngModel)]="user.age" name="age" class="form-control inp1" id="age" readonly>
+      <label for="gender">Gender</label>
+      <input class="inp" type="radio" [(ngModel)]="user.gender" value="Male" name="gender" disabled>Male
+      <input class="inp" type="radio" [(ngModel)]="user.gender" value="Female" name="gender" disabled>Female
+      <input class="inp" type="radio" [(ngModel)]="user.gender" value="Others" name="gender" disabled>Others
+    </div>
+
+    <div class="form-froup inline">
+      <label for="dob">Date of Birth</label>
+        <input class="form-control inp1" [ngModel]="user.dob | date:'dd-MM-yyyy'" name="dob" id="dob" readonly>
+    </div>
+
+    <div class="form-froup inline">
+      <label for="designation">Designation</label>
+      <table>
+        <tr>
+          <td style="width: 120px">
+            <select size="5" multiple="multiple" class="form-control" [(ngModel)]="usr" name="alldesg" id="alldesg"
+              ngModel #alldesg="ngModel" (change)="createList(usr,btn1,'button1',btn2)">
+              <option *ngFor="let usr of fromUserslist">{{usr}}</option>
+            </select>
+          </td>
+          <span>&nbsp;</span>
+          <td style="width: 50px">
+            <input class="inp" type="button" #btn1 disabled (click)="updateToList()" value="-->" /><br /><br />
+            <input class="inp" type="button" #btn2 disabled (click)="removeFromList()" value="<--" />
+          </td>
+          <td style="width: 120px">
+            <select size="5" name="asgdesg" id="asgdesg" multiple="multiple" class="form-control" [(ngModel)]="usr"
+              (change)="createList(usr,btn1,'button2',btn2)">
+              <option *ngFor="let usr of toUserslist">{{usr}}</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="form-group inline">
+      <label for="houseNo">House Number</label>
+      <input [(ngModel)]="user.address.houseNo" name="houseNo" class="form-control inp1" autocomplete="off">
+
+      <label for="street">Street Number</label>
+      <input [(ngModel)]="user.address.steetNo" name="street" class="form-control inp1" autocomplete="off">
+    </div>
+
+    <div class="form-group inline">
+      <label for="country">Country</label>
+      <select class="form-control" (change)="onChangeCountry($event.target.value)" [(ngModel)]="user.address.country"
+        name="country" id="country">
+        <option *ngFor="let c of countries" [value]="c.id">
+          {{c.cname}}
+        </option>
+      </select>
+
+      <label for="city">City</label>
+      <select class="form-control" [(ngModel)]="user.address.city" name="city" id="city">
+        <option *ngFor="let c of cities">
+          {{c.cname}}
+        </option>
+      </select>
+    </div>
+    <button class="btn btn-primary">Edit User</button>
+
+  </form>

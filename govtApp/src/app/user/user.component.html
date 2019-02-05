@@ -1,0 +1,161 @@
+<!-- <div class="col-md-6">
+<h2> User Details</h2>
+
+<table cellspacing="10">
+  <thead>
+  <tr>
+    <th class="spacing">ID</th>
+    <th class="spacing">FirstName</th>
+    <th class="spacing">LastName</th>
+    <th class="spacing">Email</th>
+    <th class="spacing">Contact</th>
+    <th class="spacing">Age</th>
+    <th class="spacing">City</th>
+    <th class="spacing">Gender</th>
+    <th class="spacing">Designation</th>
+    <th class="spacing">Status</th>
+    <th class="spacing">Approve</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td class="approver">{{user.id}}</td>
+    <td class="approver">{{user.firstname}}</td>
+    <td class="approver">{{user.lastname}}</td>
+    <td class="approver">{{user.email}}</td>
+    <td class="approver">{{user.contact}}</td>
+    <td class="approver">{{user.age}}</td>
+    <td class="approver">{{user.address.city}}</td>
+    <td class="approver">{{user.gender}}</td>
+    <td class="approver">{{user.designation}}</td>
+    <td class="approver">
+      <span *ngIf="!user.status; else status">Not Approved</span>
+      <ng-template #status>Approved</ng-template>
+      </td>
+      <td class="approver"><input type="checkbox" value="approve" name="approve" [(ngModel)]="user.status" (change)="toggleVisibility(user)"></td>
+      <td class="approver"><input type="button" (click) ="editUser(user)" value="edit" name="edit"></td>
+  </tr>
+  </tbody>
+  
+</table>
+<mat-paginator [length]="count"
+              [pageSize]="1">
+</mat-paginator>
+<button class="btn btn-danger" (click)="updateUserbyParam(user)"> Approve</button>
+</div>  -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <router-outlet name="user"></router-outlet> -->
+
+<!-- <mat-progress-spinner style="margin:0 auto;" mode="indeterminate"></mat-progress-spinner> -->
+
+<login-user></login-user>
+
+<div *ngIf="showSpinner && status" class="spinner">
+  <mat-progress-spinner diameter="200" mode="indeterminate"></mat-progress-spinner>
+</div>
+<!-- <ng-template #list> -->
+  
+  <div *ngIf="status;else error" class="mat-elevation-z8">
+
+    <h2> User Details</h2>
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- First Name Column -->
+      <ng-container matColumnDef="firstname">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+        <td class="approver" mat-cell *matCellDef="let element">
+          <a (click)="editUser(element)">{{element.firstname}} </a>
+        </td>
+      </ng-container>
+
+      <!-- Last Name Column -->
+      <ng-container matColumnDef="lastname">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <!-- Contact Column -->
+      <ng-container matColumnDef="contact">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> Contact </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.contact}} </td>
+      </ng-container>
+
+      <!-- Age Column -->
+      <ng-container matColumnDef="age">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> Age </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.age}} </td>
+      </ng-container>
+
+      City Column
+      <ng-container matColumnDef="city">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.address.city}} </td>
+      </ng-container>
+
+      <!-- Gender Column -->
+      <ng-container matColumnDef="gender">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> Gender </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.gender}} </td>
+      </ng-container>
+
+      <!-- DOB Column -->
+      <ng-container matColumnDef="dob">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.dob | date:'dd-MM-yyyy'}} </td>
+      </ng-container>
+
+      <!-- Designation Column -->
+      <ng-container matColumnDef="designation">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> Designation </th>
+        <td class="approver" mat-cell *matCellDef="let element"> {{element.designation}} </td>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th class="spacing" mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+        <td class="approver" mat-cell *matCellDef="let element">
+          <span *ngIf="!element.status; else status">Not Approved</span>
+          <ng-template #status>Approved</ng-template>
+        </td>
+      </ng-container>
+
+      <!-- Approve Column -->
+      <ng-container matColumnDef="approve">
+        <th class="spacing" mat-header-cell *matHeaderCellDef> Approve<br />
+          <mat-checkbox (click)="checkAll()" (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+            [indeterminate]="selection.hasValue() && !isAllSelected()">
+          </mat-checkbox>
+        </th>
+        <td class="approver" mat-cell *matCellDef="let element">
+          <mat-checkbox (click)="$event.stopPropagation();toggleVisibility(element)" (change)="$event ? selection.toggle(element) : null"
+            [checked]="selection.isSelected(element)">
+          </mat-checkbox>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let element; columns: displayedColumns;" (click)="selection.toggle(element)"></tr>
+    </table>
+
+    <button class="button" mat-raised-button color="primary" (click)="updateUserbyParam()"> Approve</button>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  <ng-template #error>
+    <div class="error">
+      {{errorMsg}}
+    </div>
+  </ng-template>
+<!-- </ng-template> -->
