@@ -5,8 +5,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import org.hibernate.JDBCException;
+import org.hibernate.exception.SQLGrammarException;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -17,6 +20,7 @@ import com.example.demo.exception.ApplicationError;
 import com.example.demo.exception.GOGException;
 import com.example.demo.repo.LoginRepository;
 import com.example.demo.repo.UserRepository;
+import com.example.demo.utils.Constants;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -38,6 +42,12 @@ public class UserServiceImpl implements UserService {
 			logger.info(jsessionid + " : Create User" + user.toString());
 			userRepository.save(user);
 		}
+		catch(SQLGrammarException exception) {
+			System.out.println("isnide");
+			logger.error("Exception while creating user : "+user +" "+exception);	
+			error=new ApplicationError(HttpStatus.BAD_REQUEST,new Date(), Constants.CREATE_USER_ERROR,"HIGH");
+			throw new GOGException(error);
+		}
 		catch (Exception e) {
 			logger.error("Exception while creating user : "+user +" "+e);	
 			error=new ApplicationError(HttpStatus.BAD_REQUEST,new Date(), e.getMessage(),"HIGH");
@@ -51,7 +61,12 @@ public class UserServiceImpl implements UserService {
 		logger.info(jsessionid + "Get user");
 		try {
 			return (List<User>) userRepository.findAll();
-		}catch (Exception e) {
+		}catch(DataAccessException exception) {
+			logger.error("Exception while retrieving users : " +exception);	
+			error=new ApplicationError(HttpStatus.SERVICE_UNAVAILABLE,new Date(),Constants.GET_USER_ERROR,"HIGH");
+			throw new GOGException(error);
+		}		
+		catch (Exception e) {
 			logger.error("Exception while retrieving users : " +e);	
 			error=new ApplicationError(HttpStatus.SERVICE_UNAVAILABLE,new Date(), e.getMessage(),"HIGH");
 			throw new GOGException(error);
@@ -68,7 +83,7 @@ public class UserServiceImpl implements UserService {
 		userRepository.saveAll(users);
 		}catch (Exception e) {
 			logger.error("Exception while approving users : " +e);	
-			error=new ApplicationError(HttpStatus.BAD_REQUEST,new Date(), e.getMessage(),"HIGH");
+			error=new ApplicationError(HttpStatus.BAD_REQUEST,new Date(), Constants.APPROVE_USER_ERROR,"HIGH");
 			throw new GOGException(error);
 		}
 	}

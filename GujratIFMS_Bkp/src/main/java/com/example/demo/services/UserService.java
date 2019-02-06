@@ -13,7 +13,7 @@ import com.example.demo.exception.GOGException;
 @Service("userService")
 public interface UserService 
 {
-	void create(User user) throws GOGException;
+	void create(User user);
 	
 	HashMap<String, String> login(String login);
 	
@@ -25,7 +25,7 @@ public interface UserService
 
 	String deleteUser(int id);
     
-    List<User> findAll() throws GOGException;
+    List<User> findAll();
 	
     List<User> findUserbyStatus(boolean stat);    
     
