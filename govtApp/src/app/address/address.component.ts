@@ -18,9 +18,7 @@ signupForm:FormGroup;
   
   formaddarray: any;
   myfname: any;
-  mylname: any;
-
-  
+  mylname: any;  
 
   constructor(private fb:FormBuilder,private router: Router, private userService: UserService) 
    { }
@@ -29,7 +27,6 @@ signupForm:FormGroup;
     this.signupForm= this.fb.group({
       itemsRows: this.fb.array([this.initItemRows()])
     });
-
   }
 
   initItemRows(){
@@ -55,15 +52,9 @@ deleteRow(){
 onFormSubmit(formaddarray:NgForm,myfname:string,mylname:string){
 this.userService.onFormSubmit(formaddarray,myfname, mylname)
 .subscribe( data => {
-  this.formaddarray.value = data,
-  this.myfname = data,
-  this.mylname = data
+  alert("Employee Added successfully");
+  this.router.navigateByUrl('/welcome');
 });
 }
-
-  // constructor() { }
-
-  // ngOnInit() {
-  // }
 
 }

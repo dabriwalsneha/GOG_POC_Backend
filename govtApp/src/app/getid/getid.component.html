@@ -1,35 +1,40 @@
 <login-user></login-user>
-<form [formGroup]="getid" (ngSubmit)="onSubmit()" >
-  <div style="padding-left: 10px">
-      <input type="number" formControlName="getmyid" placeholder="Enter Your ID">
-      <input type="submit" value="Submit">
+<form [formGroup]="getid" (ngSubmit)="onSubmit()">
+  <div style="margin-top: 10px; padding-left: 10px">
+    <input type="number" formControlName="getmyid" placeholder="Enter Your ID">
+    <input type="submit" value="Submit">
   </div>
 
-  </form>
-  
-  <table cellspacing="10" *ngIf="status">
+</form>
+<div *ngIf="status && mydetails;else error">
+  <table cellspacing="10">
     <thead>
-    <tr>
-      <th class="spacing">Id</th>
-      <th class="spacing">First Name</th>
-      <th class="spacing">Last Name</th>
-      <th class="spacing">Address</th>
-    </tr>
+      <tr>
+        <th class="spacing">Id</th>
+        <th class="spacing">First Name</th>
+        <th class="spacing">Last Name</th>
+        <th class="spacing">Address</th>
+      </tr>
     </thead>
     <tbody>
-    <tr>
-      <td class="approver">{{mydetails.id}}</td>
-      <td class="approver">{{mydetails.firstName}}</td>
-      <td class="approver">{{mydetails.lastName}}</td>
-      <td class="approver">
-        <tr *ngFor="let address of addresses">
-          {{address.__Adrs___hno}}, {{address.__Adrs___city}}, {{address.__Adrs___state}}
-        </tr>
+      <tr>
+        <td class="approver">{{mydetails.id}}</td>
+        <td class="approver">{{mydetails.firstName}}</td>
+        <td class="approver">{{mydetails.lastName}}</td>
+        <td class="approver">
+      <tr *ngFor="let address of addresses">
+        {{address.__Adrs___hno}}, {{address.__Adrs___city}}, {{address.__Adrs___state}}
+      </tr>
       </td>
-    </tr>
+      </tr>
     </tbody>
-    
   </table>
-  
+</div>
 
-  <!-- <p>DATA RETURN IS ->{{mydetails | json}}</p> -->
+<ng-template #error>
+  <div class="error">
+    {{errorMsg}}
+  </div>
+</ng-template>
+
+<!-- <p>DATA RETURN IS ->{{mydetails | json}}</p> -->

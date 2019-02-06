@@ -36,9 +36,9 @@ export class LoginUserComponent implements OnInit {
       },
       error => {
         this.errorMsg = error;
-        if (this.errorMsg.status == 401 || this.errorMsg.status == 400) {
+        if (this.errorMsg.status == 400) {
           this.sharingService.setStatus(true);
-          this.router.navigateByUrl("/login");
+          //this.router.navigateByUrl("/login");
         }
       });
     this.welcome = this.sharingService.getWel();
