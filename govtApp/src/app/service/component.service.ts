@@ -7,6 +7,10 @@ export class ComponentService {
 
   constructor() { }
   private data:any = undefined;
+  private data1:any = undefined;
+  private data2:any = undefined;
+  private data3:any = undefined;
+  private data4:any = undefined;
 
     setData(data:any){
         this.data = data;
@@ -17,34 +21,34 @@ export class ComponentService {
     }
 
     setLoginData(data:any){
-        this.data = data;
+        this.data1 = data;
     }
 
     getLoginData():any{
-        return this.data;
+        return this.data1;
     }
 
     setStatus(data:any){
-        this.data = data;
+        this.data2 = data;
     }
 
     getStatus():any{
-        return this.data;
+        return this.data2;
     }
 
     setWel(data:any){
-        this.data = data;
+        this.data3 = data;
     }
 
     getWel():any{
-        return this.data;
+        return this.data3;
     }
 
     setUser(data:any){
-        this.data = data;
+        this.data4 = data;
     }
 
     getUser():any{
-        return this.data;
+        return this.data4;
     }
 }

@@ -123,11 +123,6 @@ export class AddUserComponent implements OnInit {
         return;
     }
 
-    if (this.user.age != undefined) {
-      if (this.phonenumber(this.user.age) == false)
-        return;
-    }
-
     if (this.toUserslist.length == 0) {
       alert("Select a particular Designation.")
       return;

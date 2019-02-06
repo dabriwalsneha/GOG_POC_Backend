@@ -19,3 +19,7 @@ export class User {
     this.address=new AddressJson();
   }
 }
+
+export class PageUser{
+  content : User[];
+}

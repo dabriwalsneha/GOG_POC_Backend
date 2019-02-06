@@ -20,6 +20,15 @@ export class LoginComponent implements OnInit {
   constructor(private apiService: ApiService, private sharingService: ComponentService, private router: Router, private formBuilder: FormBuilder) {
 
   }
+  ngOnInit() {
+    this.status = this.sharingService.getStatus();
+    console.log("hi "+this.status)
+    window.sessionStorage.removeItem('token');
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.compose([Validators.required])],
+      password: ['', Validators.required]
+    });
+  }
 
   onSubmit() {
     if (this.loginForm.invalid) {
@@ -30,23 +39,12 @@ export class LoginComponent implements OnInit {
       .set('password', this.loginForm.controls.password.value)
       .set('grant_type', 'password');
 
-      this.sharingService.setUser(this.loginForm.controls.username.value);
-
     this.apiService.login(body.toString()).subscribe(data => {
       window.sessionStorage.setItem('token', JSON.stringify(data));
-
+      this.sharingService.setUser(this.loginForm.controls.username.value);
       this.router.navigateByUrl('/welcome');
     }, error => {
       this.invalidLogin = true;
-    });
-  }
-
-  ngOnInit() {
-    this.status = this.sharingService.getStatus();
-    window.sessionStorage.removeItem('token');
-    this.loginForm = this.formBuilder.group({
-      username: ['', Validators.compose([Validators.required])],
-      password: ['', Validators.required]
     });
   }
 
