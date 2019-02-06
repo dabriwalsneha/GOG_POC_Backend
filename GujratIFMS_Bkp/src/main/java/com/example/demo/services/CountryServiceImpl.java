@@ -3,7 +3,6 @@ package com.example.demo.services;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.exception.SQLGrammarException;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +12,6 @@ import com.example.demo.entity.Countries;
 import com.example.demo.exception.ApplicationError;
 import com.example.demo.exception.GOGException;
 import com.example.demo.repo.CountriesRepository;
-import com.example.demo.utils.Constants;
 
 @Service
 public class CountryServiceImpl implements CountryService {
@@ -31,10 +29,9 @@ public class CountryServiceImpl implements CountryService {
 		
 		try {
 			return (List<Countries>) countriesRepository.findAll();
-		}		
-		catch (Exception e) {
-			logger.error("Exception while retriveing countries : "+e);	
-			error=new ApplicationError(HttpStatus.SERVICE_UNAVAILABLE,new Date(),Constants.GET_COUNTRIES_ERROR,"HIGH");
+		}catch (Exception e) {
+			logger.error("Exception while creating user : "+e);	
+			error=new ApplicationError(HttpStatus.SERVICE_UNAVAILABLE,new Date(), e.getMessage(),"HIGH");
 			throw new GOGException(error);
 		}
 	}
