@@ -35,8 +35,8 @@ export class UserService {
   private getempdetails = 'http://localhost:8080/user-portal/api/getEmpByID';
 
 
-  getCountriesURL = 'http://localhost:8080/user-portal/api/countries';
-  getCitiesURL = 'http://localhost:8080/user-portal/api/cities';
+  private getCountriesURL = 'http://localhost:8080/user-portal/api/countries';
+  private getCitiesURL = 'http://localhost:8080/user-portal/api/cities';
 
   //private userUrl = '/api';
 
