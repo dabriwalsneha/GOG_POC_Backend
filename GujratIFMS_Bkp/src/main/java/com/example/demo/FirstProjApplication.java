@@ -15,8 +15,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-import com.example.demo.controller.MainController;
-
 import ch.qos.logback.classic.Logger;
 
 
@@ -29,26 +27,26 @@ public class FirstProjApplication
 
 	private static Logger logger=(ch.qos.logback.classic.Logger) LoggerFactory.getLogger(FirstProjApplication.class);
 
-    public static void main(String[] args)
-    {
-    	SpringApplication.run(FirstProjApplication.class, args);
-    	logger.info("Application started "+new Date());
-    	 	    	
-    }
-    
-    @SuppressWarnings("rawtypes")
+	public static void main(String[] args)
+	{
+		SpringApplication.run(FirstProjApplication.class, args);
+		logger.info("Application started "+new Date());
+
+	}
+
+	@SuppressWarnings("rawtypes")
 	@Bean
 	public FilterRegistrationBean corsFilter() {
-	    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-	    CorsConfiguration config = new CorsConfiguration();
-	    config.setAllowCredentials(true);
-	    config.addAllowedOrigin("*");
-	    config.addAllowedHeader("*");
-	    config.addAllowedMethod("*");
-	    source.registerCorsConfiguration("/**", config);
-	    @SuppressWarnings("unchecked")
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		CorsConfiguration config = new CorsConfiguration();
+		config.setAllowCredentials(true);
+		config.addAllowedOrigin("*");
+		config.addAllowedHeader("*");
+		config.addAllowedMethod("*");
+		source.registerCorsConfiguration("/**", config);
+		@SuppressWarnings("unchecked")
 		FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
-	    bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
-	    return bean;
+		bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
+		return bean;
 	}
 }

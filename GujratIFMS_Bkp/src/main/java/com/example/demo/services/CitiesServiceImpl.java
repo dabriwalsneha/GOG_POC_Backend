@@ -12,6 +12,7 @@ import com.example.demo.entity.Cities;
 import com.example.demo.exception.ApplicationError;
 import com.example.demo.exception.GOGException;
 import com.example.demo.repo.CitiesRepository;
+import com.example.demo.utils.Constants;
 
 @Service
 public class CitiesServiceImpl implements CitiesService {
@@ -29,8 +30,8 @@ public class CitiesServiceImpl implements CitiesService {
 		try {
 			return CitiesRepository.getCitiesBycid(id);
 		}catch (Exception e) {
-			logger.error("Exception while creating user : "+e);	
-			error=new ApplicationError(HttpStatus.SERVICE_UNAVAILABLE,new Date(), e.getMessage(),"HIGH");
+			logger.error("Exception while retrieving cities : "+e);	
+			error=new ApplicationError(HttpStatus.SERVICE_UNAVAILABLE,new Date(), Constants.GET_CITIES_ERROR,"HIGH");
 			throw new GOGException(error);
 		}
 	}
