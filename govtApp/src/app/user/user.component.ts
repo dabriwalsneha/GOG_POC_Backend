@@ -22,8 +22,6 @@ export class UserComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-
-
   users: any;
   user: User[] = [];
   usersforapprove: User[] = [];
@@ -38,10 +36,8 @@ export class UserComponent implements OnInit {
   nextPage: boolean = true;
   prevPage: boolean = false;
 
-
   constructor(private router: Router, private userService: UserService, private sharingService: ComponentService) {
   }
-
 
   ngOnInit() {
     this.page = 0;

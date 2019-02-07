@@ -23,3 +23,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+
+#Ignore file named 'Application.properties'
+GujratIFMS_Bkp/src/main/resources/application.properties
